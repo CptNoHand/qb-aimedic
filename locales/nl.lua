@@ -7,19 +7,18 @@ local Translations = {
         unknow_error      = "Onbekende fout...",
     },
     success = {
-        treatment_done    = "Uw behandeling is voltooid, u werd in rekening gebracht: %value",
+        treatment_done    = "Uw behandeling is voltooid, u werd in rekening gebracht: %{value}",
     },
     info = {
         getting_treatment = "De dokter geeft je medische hulp",
         waiting_message   = "Je moet wachten totdat de dokter klaar is.",
     },
-
     mail = {
-        sender = "",
-        subject = "Medische hulp",
-        message = "",
-    }
-    
+        sender            = "%{docter}",
+        subject           = "Medische hulp",
+        message           = "Hey, %{username}<br /><br />Een rekening voor Medische hulp!<br />Locatie: <strong>%{streetName}</strong><br /><br/><br/>Met vriendelijke groet,<br />%{company}",
+    },
+}
 
 Lang = Locale:new({
     phrases = Translations,
